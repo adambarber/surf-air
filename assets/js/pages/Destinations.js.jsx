@@ -29,7 +29,7 @@ var Destinations = React.createClass({
     }
   },
   getInitialState: function() {
-    var selectedDestination = this.props.location.destination
+    var selectedDestination = this.props.params.destination
     return {
       selectedDestination: selectedDestination
     };

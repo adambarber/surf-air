@@ -21,10 +21,9 @@ app.use('/assets', express.static('dist'));
 app.get('*', function(req, res) {
   var location = createLocation(req.url)
   match({routes: Routes, location: location}, function(error, redirectLocation, renderProps) {
-    var handler = React.createElement(RoutingContext, objectAssign({}, renderProps));
+    var handler = React.createElement(RoutingContext, objectAssign({}, renderProps))
     var content = React.renderToString(handler);
     var title = DocumentTitle.rewind();
-    console.log('title', title)
     res.render('index', {content: content})
   })
 });
