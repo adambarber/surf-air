@@ -28,15 +28,15 @@ var Header = React.createClass({
 
         <nav className={menuClasses}>
           <div className='pull-left primary-nav' onClick={this.onLinkClick}>
-            <Router.Link to='/how-it-works/'>How It Works</Router.Link>
-            <Router.Link to='/destinations/'>Destinations</Router.Link>
-            <Router.Link to='/travel-info/'>Travel Info</Router.Link>
-            <Router.Link to='/faqs/'>Frequently Asked Questions</Router.Link>
+            <Router.Link to='/how-it-works/' activeClassName="active">How It Works</Router.Link>
+            <Router.Link to='/destinations/' activeClassName="active">Destinations</Router.Link>
+            <Router.Link to='/travel-info/' activeClassName="active">Travel Info</Router.Link>
+            <Router.Link to='/faqs/' activeClassName="active">Frequently Asked Questions</Router.Link>
           </div>
 
           <div className='pull-right' onClick={this.onLinkClick}>
-            <Router.Link to='/log-in/' className='log-in'>Log In</Router.Link>
-            <Router.Link to='/join-us/' className='join-us'>Become A Member</Router.Link>
+            <Router.Link to='/log-in/' className='log-in' activeClassName="active">Log In</Router.Link>
+            <Router.Link to='/join-us/' className='join-us' activeClassName="active">Become A Member</Router.Link>
           </div>
 
           <i className={'fa fa-close close-mobile-menu hide-on-desktop'} onClick={this.toggleMobileMenu}></i>
