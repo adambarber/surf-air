@@ -28,8 +28,6 @@ var DestinationMarker = React.createClass({
         <Marker onHover={this.onHover}
           {...this.props}
           position={loc}
-          label={destination.name}
-          title={destination.name}
           onClick={this.onClick}
           icon={icon}/>
 

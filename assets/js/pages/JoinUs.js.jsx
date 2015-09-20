@@ -7,7 +7,6 @@ var PageHeader = require('../components/shared/PageHeader.js.jsx');
 
 var Logo = require('../../images/logo-blue.png');
 
-
 var JoinUsForm = require('../components/join-us/JoinUsForm.js.jsx');
 
 var JoinUs = React.createClass({

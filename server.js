@@ -2,6 +2,7 @@ var express = require('express');
 var ejs = require('ejs');
 
 var React = require('react');
+var DocumentTitle = require('react-document-title');
 var Router = require('react-router');
 var Routes = require('./dist/routes.server.js');
 var createLocation = require('history/lib/createLocation');
@@ -22,6 +23,8 @@ app.get('*', function(req, res) {
   match({routes: Routes, location: location}, function(error, redirectLocation, renderProps) {
     var handler = React.createElement(RoutingContext, objectAssign({}, renderProps));
     var content = React.renderToString(handler);
+    var title = DocumentTitle.rewind();
+    console.log('title', title)
     res.render('index', {content: content})
   })
 });
