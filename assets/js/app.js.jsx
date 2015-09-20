@@ -3,11 +3,10 @@ require('../less/global.less');
 require('font-awesome/less/font-awesome.less');
 var createBrowserHistory =  require('history/lib/createBrowserHistory');
 var React = require('react');
+React.initializeTouchEvents(true);
 var RouterModule = require('react-router');
 var Router = RouterModule.Router;
 var Routes = require('./routes.js.jsx');
-
-React.initializeTouchEvents(true)
 
 var history = createBrowserHistory();
 var contentContainer = document.getElementById('content');

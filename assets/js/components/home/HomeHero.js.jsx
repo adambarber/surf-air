@@ -15,7 +15,7 @@ var HomeHero = React.createClass({
           </p>
 
             <div className='home-hero-cta'>
-              <Router.Link to='join-us' className='button'>Become A Surf Air Member</Router.Link>
+              <Router.Link to='/join-us/' className='button'>Become A Surf Air Member</Router.Link>
             </div>
         </div>
 
