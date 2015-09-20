@@ -1,0 +1,29 @@
+@import "../../variables.less";
+.home-logos {
+  width: 100%;
+  background: @primaryColor;
+  color: #fff;
+  border-top: 1px solid fade(@primaryColor, 50%);
+  overflow: hidden;
+  .home-logos-inner {
+    height: 100px;
+  }
+  .logos-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+  }
+  .home-logo {
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width : 1037px) {
+    .home-logo {
+      width: 20%;
+    }
+  }
+}

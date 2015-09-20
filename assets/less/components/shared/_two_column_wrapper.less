@@ -1,0 +1,20 @@
+@import "../../variables.less";
+
+.two-column-wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: @pageWidth;
+  margin: auto;
+  @media screen and (max-width : 1037px) {
+    flex-direction: column;
+  }
+}
+
+.two-column-wrapper > div {
+  flex: 0 1 auto;
+  display: flex;
+}
+
+.questions-list {
+  flex-direction: column;
+}

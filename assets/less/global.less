@@ -1,0 +1,50 @@
+@import "./modules/fonts.less";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "KievitWeb-Exlig", Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.page-content-wrapper {
+  padding: 0 1em;
+  min-height: 400px;
+  .page-content-inner {
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+  }
+}
+
+.pull-left {
+  float: left
+}
+.pull-right {
+  float: right;
+}
+
+@media screen and (min-width: 1038px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width : 1037px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .hide-on-desktop {
+    display: inline-block;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

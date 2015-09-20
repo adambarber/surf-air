@@ -1,0 +1,67 @@
+{
+  "name": "surf-air",
+  "version": "1.0.0",
+  "description": "ReactJS based revamp of the SurfAir.com website",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "dev": "webpack-dev-server --config webpack-dev-server.config.js --progress --colors --hot"
+  },
+  "author": "Adam Barber",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.17.0",
+    "file-loader": "^0.8.4",
+    "image-webpack-loader": "^1.6.1",
+    "imagemin": "^3.2.0",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "less-plugin-autoprefix": "^1.4.2",
+    "object-assign": "^4.0.1",
+    "react-hot-loader": "^1.3.0",
+    "react-tools": "^0.13.3",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.12.1",
+    "webpack-babel-jest": "^1.0.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "babel": "^5.8.23",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "font-awesome": "^4.4.0",
+    "formsy-react": "^0.14.1",
+    "history": "^1.9.1",
+    "jade": "^1.11.0",
+    "node-jsx": "^0.13.3",
+    "object-assign": "^4.0.1",
+    "react": "^0.13.3",
+    "react-document-title": "^2.0.0",
+    "react-google-maps": "^2.1.0",
+    "react-router": "^1.0.0-rc1",
+    "reflux": "^0.2.12",
+    "smoothscroll": "^0.1.0"
+  },
+  "jest": {
+    "rootDir": "assets/js",
+    "scriptPreprocessor": "preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "../../node_modules/react",
+      "../../node_modules/reflux",
+      "../../node_modules/react-router"
+    ],
+    "testFileExtensions": [
+      "js"
+    ],
+    "modulePathIgnorePatterns": [
+      "../../node_modules"
+    ],
+    "testPathIgnorePatterns": [
+      "../../node_modules",
+      "__tests__/support"
+    ]
+  }
+}

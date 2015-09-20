@@ -1,0 +1,107 @@
+@import "../variables.less";
+@import "../modules/buttons.less";
+
+header {
+  background: @primaryColor;
+  border-top: 3px solid darken(@primaryColor, 20%);
+  display: flex;
+  justify-content: space-between;
+  align-items: middle;
+  padding: 1.5em 1em;
+  transform: translateZ(0);
+  width: 100%;
+  .logo {
+     display: block;
+     background: url('../../images/logo-white.png');
+     background-size: cover;
+     width: 120px;
+     height: 20px;
+     text-indent: -9999em;
+  }
+  nav {
+    width: 80%;
+    .primary-nav {
+      margin-top: 7px;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1em 0 0;
+      font-family: 'KievitWeb-Book', 'sans serif';
+      font-size: 1.2em;
+      padding: 0 0 1.3em 0;
+      &:last-child {
+        margin: 0;
+      }
+      &.join-us {
+        .button;
+        font-size: 1em;
+        &:hover,
+        &.active {
+          border-bottom: 0;
+          background: lighten(@primaryColor, 10%);
+          color: #fff;
+        }
+      }
+      &.active,
+      &:hover {
+        border-bottom: 5px solid #fff;
+      }
+    }
+  }
+  .toggle-mobile-menu {
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .close-mobile-menu {
+    color: @primaryColor;
+    font-size: 2em;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  @media screen and (max-width : 1037px) {
+    nav {
+      display: block;
+      position: absolute;
+      top: -23em;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background: #fff;
+      transition: top 0.2s;
+      z-index: 100;
+
+      .pull-left,
+      .pull-right {
+        float: none;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        padding: 1em;
+        margin: 0;
+        background: #fff;
+        color: @primaryColor;
+        border-bottom: 1px solid @primaryColor;
+        &.active,
+        &:hover {
+          border-bottom: 1px solid @primaryColor;
+        }
+        &:last-child {
+          padding: 1em;
+          font-size: 1.2em;
+        }
+      }
+      &.mobile-nav-visible {
+        top: -3px;
+        transition: top 0.2s;
+        z-index: 100;
+      }
+    }
+  }
+}

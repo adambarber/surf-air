@@ -1,0 +1,65 @@
+@import "../variables.less";
+
+footer {
+  background: lighten(@primaryColor, 1%) url('../../images/dark-grid-background.svg');
+  border-top: 3px solid fade(lighten(@primaryColor, 30%), 10%);
+  padding: 0 2em;
+  overflow: hidden;
+  .footer-nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0 1em;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width : 1037px) {
+      align-items: center;
+      justify-content: center;
+      nav {
+        width: 100%;
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        line-height: 2em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    text-align: center;
+    color: #fff;
+    padding: 1em 0 2em;
+    font-size: 15px;
+    p {
+      display: inline-block;
+      margin: 0 1em 0 0;
+      font-weight: 900;
+      i {
+        margin: 0 0.5em 0 0;
+      }
+      &:after {
+        padding: 0 0 0 1em;
+        content: "|"
+      }
+      &:last-child {
+        margin: 0;
+        &:after {
+          padding: 0;
+          content: ""
+        }
+      }
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 0 1em 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

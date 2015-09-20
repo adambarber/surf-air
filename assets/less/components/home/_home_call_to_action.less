@@ -1,0 +1,50 @@
+@import "../../variables.less";
+@import "../../modules/buttons.less";
+
+.home-call-to-action {
+  background: #fff;
+  color: @primaryColor;
+  width: 100%;
+  border-top: 1px solid;
+  .home-call-to-action-inner {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .home-call-to-action-text {
+    text-align: center;
+    display: inline-block;
+    margin: 0 5em 0 0;
+    h3 {
+      font-size: 2.5em;
+      margin: 0;
+      font-weight: 900;
+    }
+    p {
+      margin: 1em 0 0 0;
+      font-size: 1.5em;
+      line-height: 1.2em;
+    }
+  }
+  .home-call-to-action-button {
+    .button;
+    background: @primaryColor;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+
+  @media screen and (max-width : 1037px) {
+    padding: 2em 1em;
+    .home-call-to-action-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+    .home-call-to-action-text {
+      margin: 0 auto 2em;
+    }
+  }
+}

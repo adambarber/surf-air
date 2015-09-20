@@ -1,0 +1,14 @@
+@import "../variables.less";
+.button {
+  background: #fff;
+  color: @primaryColor;
+  padding: 0.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s;
+  &:hover {
+    color: #fff;
+    background: lighten(@primaryColor, 10%);
+  }
+}

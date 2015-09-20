@@ -1,0 +1,44 @@
+@import "../../variables.less";
+@import "../../modules/buttons.less";
+
+.home-hero {
+  background: #fff url('../../../images/home-hero-bg.jpg') 50% 50%;
+  background-size: cover;
+  border-top: 1px solid fade(@primaryColor, 50%);
+  width: 100%;
+  color: #fff;
+  padding: 0 1em 2em 1em;
+  font-family: KievitWeb-Exlig, KievitWeb-Light, 'Open Sans', Arial, Helvetica, sans-serif;
+  .home-hero-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .headline {
+      font-weight: 900;
+      font-size: 6em;
+      margin: 0.5em 0;
+    }
+    .subhead {
+      display: block;
+      font-family: 'KievitWebPro-Ita';
+      margin: 0 auto;
+      font-size: 2em;
+      line-height: 1em;
+    }
+  }
+
+  .home-hero-cta {
+    margin: 4em 0 0 0;
+    .button {
+      padding: 1em;
+      font-weight: 900;
+      font-size: 1.2em;
+      color: @primaryColor;
+      background: #fff;
+    }
+  }
+}

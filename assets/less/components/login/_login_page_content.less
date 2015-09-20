@@ -1,0 +1,106 @@
+@import "../../variables.less";
+
+.login-page-content {
+
+  height: 100%;
+  margin: auto;
+
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .login-form-header {
+    margin: 0 0 4em 0;
+  }
+
+  .login-form-wrapper {
+    width: 50%;
+    background: #fff;
+    outline: 5px solid rgba(255,255,255,.2);
+    padding: 2em;
+    @media screen and (max-width : 1037px) {
+      width: 80%;
+    }
+    .inputs-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @media screen and (max-width : 1037px) {
+        flex-direction:column;
+      }
+    }
+    .input-wrapper {
+      position: relative;
+      &:last-child {
+        margin: 0;
+      }
+      &.half-width {
+        width: 49%;
+        @media screen and (max-width : 1037px) {
+          width:100%;
+          margin-bottom: 1em;
+        }
+      }
+      i {
+        position: absolute;
+        left: 10px;
+        top: 11px;
+        font-size: 1.4em;
+      }
+      input {
+        width: 100%;
+      }
+      input[type='email'],
+      input[type='password'] {
+        font-size: 1.2em;
+        padding: 10px;
+        text-indent: 30px;
+        &:focus {
+          outline: 0;
+          border: 1px solid @primaryColor;
+        }
+      }
+
+      input[type='submit'] {
+        outline: 0;
+        border: 0;
+        width: 100%;
+        font-size: 1.2em;
+        padding: 10px;
+        background: #ccc !important;
+        color: #fff !important;
+        &:hover {
+          background: @primaryColor !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+
+  .form-footer-links {
+    width: 40%;
+    margin: 3em auto 0;
+    padding: 1.2em 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    @media screen and (max-width : 1037px) {
+      flex-direction: column;
+    }
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      @media screen and (max-width : 1037px) {
+        margin-bottom: 1em;
+      }
+      &:hover {
+        font-weight: 900;
+      }
+    }
+  }
+}
