@@ -2,6 +2,7 @@ require('../../../less/components/_header.less');
 
 var React = require('react');
 var Router = require('react-router');
+var IndexLink = require('react-router/lib/IndexLink');
 
 var Header = React.createClass({
   onLinkClick: function() {
@@ -20,9 +21,9 @@ var Header = React.createClass({
     var menuClasses = this.state.showMobileMenu ? 'header-nav mobile-nav-visible' : 'header-nav';
     return (
       <header className={headerClasses}>
-        <Router.Link to='/' className='logo'>
+        <IndexLink to="/" className='logo'>
           <h1>SurfAir</h1>
-        </Router.Link>
+        </IndexLink>
 
 
         <nav className={menuClasses}>

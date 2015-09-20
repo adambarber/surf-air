@@ -12,7 +12,7 @@ var HomeCallToAction = React.createClass({
             <h3>Change How You Travel Forever</h3>
             <p>Becoming a Surf Air member takes just a few minutes.</p>
           </div>
-          <Router.Link to='join-us' className='home-call-to-action-button'>Become A Surf Air Member</Router.Link>
+          <Router.Link to='/join-us/' className='home-call-to-action-button'>Become A Surf Air Member</Router.Link>
         </div>
       </div>
     );
