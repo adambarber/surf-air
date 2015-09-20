@@ -37,7 +37,7 @@ var Destinations = React.createClass({
   render: function() {
     var documentTitle = 'Where We Fly | Destinations | Surf Air'
     var pageTitle = 'Destinations';
-    var pageSubHead = "Where Surf Air Flys. Hint: It's A Lot."
+    var pageSubHead = "Flying Everywhere You Want To Go"
     var selectedDestination = this.state.selectedDestination;
     return (
       <DocumentTitle title={documentTitle}>
