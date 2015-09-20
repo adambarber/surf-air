@@ -5,8 +5,6 @@ var Router = require('react-router');
 var DocumentTitle = require('react-document-title');
 var PageHeader = require('../components/shared/PageHeader.js.jsx');
 
-var Logo = require('../../images/logo-blue.png');
-
 var JoinUsForm = require('../components/join-us/JoinUsForm.js.jsx');
 
 var JoinUs = React.createClass({

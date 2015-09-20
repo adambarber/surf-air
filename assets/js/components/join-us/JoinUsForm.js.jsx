@@ -2,7 +2,6 @@ require('../../../less/modules/forms.less');
 require('../../../less/components/join-us/_join_us_form.less');
 
 var React = require('react');
-var Formsy = require('formsy-react');
 
 var TextInput = require('../shared/forms/TextInput.js.jsx');
 var SelectInput = require('../shared/forms/SelectInput.js.jsx');
@@ -50,7 +49,8 @@ var homeAirportOptions = [
 var travelPrefsOptions = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 var JoinUsForm = React.createClass({
-  onSubmit: function(model) {
+  onSubmit: function(e) {
+    e.preventDefault
     console.log('model', model)
   },
   enableButton: function() {
@@ -67,7 +67,7 @@ var JoinUsForm = React.createClass({
   render: function() {
     return (
       <div className='join-us-form-wrapper'>
-        <Formsy.Form onValidSubmit={this.onSubmit} onValid={this.enableButton} onInvalid={this.disableButton}>
+        <form onValidSubmit={this.onSubmit} onValid={this.enableButton} onInvalid={this.disableButton}>
 
           <TextInput name='name' label='Full Name' placeHolder='Full Name' required/>
           <TextInput name='email' type='email' validations="isEmail" label='Your Email' placeHolder='Your Email' required/>
@@ -80,15 +80,9 @@ var JoinUsForm = React.createClass({
             <input type='text' name='state' placeholder='State' />
           </div>
 
-          <div className='input-wrapper'>
-            <label htmlFor='company'>Company</label>
-            <input type='text' name='company' placeholder='Company Name' />
-          </div>
+          <TextInput name='company' label='Company Name' placeHolder='Company Name'/>
+          <TextInput name='title' label='Job Title' placeHolder='Job Title'/>
 
-          <div className='input-wrapper'>
-            <label htmlFor='title'>Title</label>
-            <input type='text' name='title' placeholder='Title' />
-          </div>
 
           <SelectInput name='home-airport' label='What is your home airport?' opts={homeAirportOptions} required />
           <MultiSelectInput name='frequent-destinations' label='Which Destinations Do You Travel to Frequently?' opts={destinationOptions} required />
@@ -100,7 +94,7 @@ var JoinUsForm = React.createClass({
 
 
           <input type="submit" disabled={!this.state.canSubmit} className='submit-button button' value='Submit Your Application'/>
-        </Formsy.Form>
+        </form>
       </div>
     );
   }

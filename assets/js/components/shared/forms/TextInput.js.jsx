@@ -2,7 +2,9 @@ var React = require('react');
 var Formsy = require('formsy-react');
 
 var TextInput = React.createClass({
-  mixins: [Formsy.Mixin],
+  getValue: function() {
+
+  },
   changeValue: function (event) {
     this.setValue(event.currentTarget.value);
   },
@@ -13,9 +15,9 @@ var TextInput = React.createClass({
   },
   render: function() {
     var message = this.props.message;
-    var errorMessage = this.getErrorMessage();
-    var className = this.showRequired() ? 'required' : this.showError() ? 'error' : null;
-    var labelText = this.showRequired() ? this.props.label + ': *' : this.props.label + ':';
+    var errorMessage = '';
+    var className = '';
+    var labelText = this.props.label;
     return (
       <div className={'input-wrapper ' + className}>
         <label htmlFor={this.props.name}>{labelText}</label>

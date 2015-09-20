@@ -15,8 +15,7 @@ var destinations = DestinationStore.destinations;
 var Destinations = React.createClass({
   mixins: [
     React.addons.PureRenderMixin,
-    Router.History,
-    Router.State
+    Router.History
   ],
   onDestinationClick: function(destination) {
     var slug = destination.slug

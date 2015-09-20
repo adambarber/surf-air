@@ -2,7 +2,6 @@ require('../../less/components/shared/_two_column_wrapper.less');
 
 var React = require('react');
 var Router = require('react-router');
-var RouteHandler = Router.RouteHandler;
 
 var DocumentTitle = require('react-document-title');
 var PageHeader = require('../components/shared/PageHeader.js.jsx');

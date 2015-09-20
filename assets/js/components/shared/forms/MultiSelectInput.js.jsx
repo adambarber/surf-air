@@ -2,7 +2,9 @@ var React = require('react');
 var Formsy = require('formsy-react');
 
 var MultiSelectInput = React.createClass({
-  mixins: [Formsy.Mixin],
+  getValue: function() {
+
+  },
   changeValue: function (event) {
     this.setValue(event.currentTarget.value);
   },
@@ -25,8 +27,8 @@ var MultiSelectInput = React.createClass({
     }
   },
   render: function() {
-    var errorMessage = this.getErrorMessage();
-    var className = this.showRequired() ? 'required' : this.showError() ? 'error' : null;
+    var errorMessage = null;
+    var className = 'required';
     return (
       <div className={'input-wrapper ' + className}>
         <label htmlFor={this.props.name}>{this.props.label}</label>
